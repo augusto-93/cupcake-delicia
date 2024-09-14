@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcake Delícia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cupcake Delícia</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li>
+                    <a href="#cart">
+                        <i class="fas fa-shopping-cart"></i> Carrinho (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <h2>Bem-vindo ao Cupcake Delícia</h2>
+        <p>Os cupcakes mais saborosos feitos com amor!</p>
+        <button onclick="scrollToMenu()">Nosso Menu</button>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Nosso Menu</h2>
+        <div class="cupcake-grid">
+            <div class="cupcake">
+                <img src="cupcake1.jpg" alt="Cupcake de Morango">
+                <h3>Cupcake de Morango</h3>
+                <p>R$ 8,00</p>
+                <button class="add-to-cart" data-name="Cupcake de Morango" data-price="8">Adicionar ao Carrinho</button>
+            </div>
+            <div class="cupcake">
+                <img src="cupcake2.jpg" alt="Cupcake de Chocolate">
+                <h3>Cupcake de Chocolate</h3>
+                <p>R$ 10,00</p>
+                <button class="add-to-cart" data-name="Cupcake de Chocolate" data-price="10">Adicionar ao Carrinho</button>
+            </div>
+            <div class="cupcake">
+                <img src="cupcake3.jpg" alt="Cupcake de Limão">
+                <h3>Cupcake de Limão</h3>
+                <p>R$ 9,00</p>
+                <button class="add-to-cart" data-name="Cupcake de Limão" data-price="9">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por fazer cupcakes! Utilizamos apenas ingredientes de alta qualidade e tudo é preparado com muito carinho.</p>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Fale Conosco</h2>
+        <form id="contato-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="form-feedback" class="feedback"></div>
+    </section>
+
+    <section id="cart" class="cart">
+        <h2>Seu Carrinho</h2>
+        <div id="cart-items"></div>
+        <p>Total: R$ <span id="total-price">0.00</span></p>
+        <button id="checkout-btn">Finalizar Compra</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cupcake Delícia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
